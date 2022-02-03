@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <!-- Создал блок с таблицей инпутом и кнопкой очистки фильтра -->
+
+    <div class="users">
+        
+        <br>
+        <br>
+        <hr>
+
+        <div class="input-div">
+            <input class="input" type="text" size="5" placeholder="Поиск по имени или email">
+        </div>
+        <br>
+        <br>
+        <hr>
+        <button class="filter" >Очистить фильтр</button>
+        <br>
+        <br>
+        <hr>
+
+        <div class="wrapper">
+           
+            <div class="users_list">
+                <table class="tableF" id="table-id">
+                    <thead>
+                        <tr>
+                            <th data-sort-method="none">username</th>
+                            <th data-sort-method="none">email</th>
+                            <th data-sort id="registr">registration_date</th>
+                            <th id="registred" data-sort-method="number">rating</th>
+                            <th data-sort-method="none"></th>
+                        </tr>
+                    </thead>
+                    <tbody class="table"></tbody>
+                </table>
+            </div>
+            <ul id="pagination" class="pag">
+                                
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Создаю модальное окно -->
+    <div id="popup" class="popup">
+        <a href="##" class="modal_area"></a>
+
+        <div class="popup_body">
+            <div class="popup_content">
+                <p class="popup_text">Вы уверены что хотите удалить пользователя?</p>
+                <div class="popup_buttons">
+                    <button class="popup_ok">Ок</button>
+                    <button class="popup_close">Отмена</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <!-- Подключенные скрипты -->
+    <script src="pagin.js"></script>
+    <script src="tablesort.min.js"></script>
+    <script src='tablesort.date.js'></script>
+    <script src='tablesort.number.js'></script>
+    
+</body>
+</html>
